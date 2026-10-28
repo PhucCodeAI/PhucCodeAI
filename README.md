@@ -16,6 +16,8 @@
 <p align="center">
   <b>@PhucCodeAI</b>
   &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://phuccodeai.github.io"><b>Blog</b></a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="https://www.linkedin.com/in/phuccodeai"><b>LinkedIn</b></a>
   &nbsp;&nbsp;·&nbsp;&nbsp;
   Hà Nội, Việt Nam
@@ -35,11 +37,12 @@
         <li><b>Temporal legal graph</b> trên <b>NebulaGraph</b> cho biết điều khoản nào còn hiệu lực vào đúng ngày xảy ra sự việc</li>
         <li>Benchmark <b>18 embedding model</b> và <b>379 cấu hình chunking</b> trên bộ 400 câu hỏi tự xây</li>
       </ul>
+      <p><a href="https://phuccodeai.github.io/blog/nguoi-dan-khong-hoi-theo-cach-luat-viet/"><b>Đọc bài viết →</b></a></p>
       <p><img src="https://img.shields.io/badge/GraphRAG-E0E7FF?style=flat-square" alt="GraphRAG"/> <img src="https://img.shields.io/badge/NebulaGraph-E0E7FF?style=flat-square" alt="NebulaGraph"/> <img src="https://img.shields.io/badge/BGE--M3-E0E7FF?style=flat-square" alt="BGE-M3"/> <img src="https://img.shields.io/badge/Elasticsearch-E0E7FF?style=flat-square" alt="Elasticsearch"/> <img src="https://img.shields.io/badge/BM25-E0E7FF?style=flat-square" alt="BM25"/> <img src="https://img.shields.io/badge/HyDE-E0E7FF?style=flat-square" alt="HyDE"/></p>
     </td>
     <td width="50%" valign="top">
       <h3>Realtime Video Analytics</h3>
-      <p><i>Phát hiện sự kiện trên camera an ninh, mỗi cụm GPU chạy tối đa 20 camera ở 15 fps, và tổng hợp thành báo cáo khi người dùng cần.</i></p>
+      <p><i>Phát hiện sự kiện trên camera an ninh (mỗi cụm GPU tối đa 20 camera ở 15 fps) rồi tổng hợp thành báo cáo khi người dùng cần.</i></p>
       <ul>
         <li>Luật <b>vật bỏ quên</b> và <b>vật bị lấy</b> bằng computer vision. Người vận hành chỉ cần chọn một mức độ nhạy, hệ thống tự suy ra toàn bộ ngưỡng kỹ thuật bên dưới</li>
         <li><b>Face detection</b> và <b>face recognition</b>, tìm embedding trên Milvus</li>
@@ -51,12 +54,13 @@
   <tr>
     <td width="50%" valign="top">
       <h3>Image-to-JSON Pipeline</h3>
-      <p><i>Service dùng chung, biến ảnh chụp và bản scan giấy tờ thành dữ liệu có cấu trúc. Trước đây mỗi trang phải nhập tay mất 3–10 phút.</i></p>
+      <p><i>Biến ảnh chụp và bản scan giấy tờ thành dữ liệu có cấu trúc. Vừa là service cho giao dịch viên thay việc nhập tay 3–10 phút mỗi trang, vừa là engine thay GPT đọc ảnh trong lending agent của tín dụng viên và thẩm định viên.</i></p>
       <ul>
         <li>Chọn pipeline <b>layout → dòng → OCR → Markdown → LLM</b>, vì VLM nhỏ dù đã fine-tune vẫn bịa nội dung và lặp chữ</li>
-        <li>Chỉ có <b>10 bộ giấy tờ mẫu</b>, nên tự sinh <b>20.000 mẫu có nhãn</b> từ template HTML với tham số ngẫu nhiên</li>
+        <li>Chỉ có <b>10 bộ giấy tờ mẫu</b>, nên tự sinh <b>20.000 mẫu có nhãn</b> cho cả luồng: 10.000 ảnh từ template HTML cho layout và OCR, 10.000 mẫu cho trích xuất JSON</li>
         <li>Fine-tune <b>Qwen3 0,6B → 4B + LoRA</b> cho từng nhóm giấy tờ, đạt <b>trên 95%</b> character accuracy và field-F1; serve trên <b>Triton A100</b></li>
       </ul>
+      <p><a href="https://phuccodeai.github.io/blog/pipeline-ocr-tu-anh-den-json/"><b>Đọc bài viết →</b></a></p>
       <p><img src="https://img.shields.io/badge/PP--OCRv6-E0E7FF?style=flat-square" alt="PP-OCRv6"/> <img src="https://img.shields.io/badge/PP--Structure-E0E7FF?style=flat-square" alt="PP-Structure"/> <img src="https://img.shields.io/badge/Qwen3-E0E7FF?style=flat-square" alt="Qwen3"/> <img src="https://img.shields.io/badge/LoRA-E0E7FF?style=flat-square" alt="LoRA"/> <img src="https://img.shields.io/badge/Triton-E0E7FF?style=flat-square" alt="Triton"/></p>
     </td>
     <td width="50%" valign="top">
@@ -67,6 +71,7 @@
         <li><b>Phát hiện con dấu giả</b> trên dữ liệu lệch 99/1, ưu tiên precision để không chặn nhầm khách thật</li>
         <li>Phát hiện <b>screenshot</b> (YOLOv10) và <b>ảnh chụp lại màn hình</b> ở mức pixel; class bị hỏng được cứu bằng cách gán nhãn lại và tắt mosaic augmentation</li>
       </ul>
+      <p><a href="https://phuccodeai.github.io/blog/con-dau-va-anh-chup-man-hinh/"><b>Đọc bài viết →</b></a></p>
       <p><img src="https://img.shields.io/badge/YOLOv10-E0E7FF?style=flat-square" alt="YOLOv10"/> <img src="https://img.shields.io/badge/EfficientNet-E0E7FF?style=flat-square" alt="EfficientNet"/> <img src="https://img.shields.io/badge/Ensemble-E0E7FF?style=flat-square" alt="Ensemble"/> <img src="https://img.shields.io/badge/Synthetic_Data-E0E7FF?style=flat-square" alt="Synthetic Data"/></p>
     </td>
   </tr>
@@ -103,7 +108,7 @@
   <img src="assets/legal-light.svg" width="100%" alt="Luồng đánh index, truy vấn và trả lời của trợ lý pháp luật">
 </picture>
 
-Người dân hỏi bằng lời thường, còn luật viết bằng thuật ngữ pháp lý. Vì vậy mỗi chunk được index kèm vài câu hỏi giả định theo cách người dân hay hỏi, và câu hỏi của người dùng được viết lại sang ngôn ngữ luật trước khi tìm. Nếu top-5 chưa đủ, agent tự đi lên điều cha, xuống khoản con hoặc sang điều liên quan, rồi tra graph để biết điều khoản đó còn hiệu lực vào ngày xảy ra sự việc hay không.
+Người dân hỏi bằng lời thường, còn luật viết bằng thuật ngữ pháp lý. Vì vậy mỗi chunk được index kèm vài câu hỏi giả định theo cách người dân hay hỏi; câu hỏi của người dùng cũng được viết lại sang ngôn ngữ luật trước khi tìm. Nếu top-5 chưa đủ, agent tự đi lên điều cha, xuống khoản con hoặc sang điều liên quan, rồi tra graph để biết điều khoản đó còn hiệu lực vào ngày xảy ra sự việc hay không.
 
 | Retrieval (400 câu hỏi) | Hit@5 | Acc@1 | Token gửi LLM |
 |---|---:|---:|---:|
